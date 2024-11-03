@@ -1,15 +1,3 @@
-/*
-
-
-
-If you want to know how this game was made, check out this video, that explains how it's made: 
-
-https://youtu.be/eue3UdFvwPo
-
-Follow me on twitter for more: https://twitter.com/HunorBorbely
-
-*/
-
 // Extend the base functionality of JavaScript
 Array.prototype.last = function () {
   return this[this.length - 1];
@@ -85,8 +73,8 @@ function resetGame() {
   sceneOffset = 0;
   score = 0;
 
-  introductionElement.style.display ='block';
-  perfectElement.style.display = 'none';
+  introductionElement.style.opacity = 1;
+  perfectElement.style.opacity = 0;
   restartButton.style.display = "none";
   scoreElement.innerText = score;
 
@@ -171,7 +159,7 @@ window.addEventListener("keydown", function (event) {
 window.addEventListener("mousedown", function (event) {
   if (phase == "waiting") {
     lastTimestamp = undefined;
-    introductionElement.style.display='none';
+    introductionElement.style.opacity = 0;
     phase = "stretching";
     window.requestAnimationFrame(animate);
   }
@@ -182,11 +170,10 @@ window.addEventListener("mouseup", function (event) {
     phase = "turning";
   }
 });
-
 window.addEventListener("touchstart", function (event) {
   if (phase == "waiting") {
     lastTimestamp = undefined;
-    introductionElement.style.display ='none';
+    introductionElement.style.display='none';
     phase = "stretching";
     window.requestAnimationFrame(animate);
   }
@@ -235,7 +222,7 @@ function animate(timestamp) {
 
           if (perfectHit) {
             perfectElement.style.display='block';
-            setTimeout(() => (perfectElement.style.display = 'none'), 1000);
+            setTimeout(() => (perfectElement.style.display='none'), 1000);
           }
 
           generatePlatform();
@@ -309,7 +296,7 @@ function animate(timestamp) {
 // Returns the platform the stick hit (if it didn't hit any stick then return undefined)
 function thePlatformTheStickHits() {
   if (sticks.last().rotation != 90)
-    throw Error(`Stick is ${sticks.last().rotation}°`);
+    throw Error(Stick is ${sticks.last().rotation}°);
   const stickFarX = sticks.last().x + sticks.last().length;
 
   const platformTheStickHits = platforms.find(
@@ -346,6 +333,7 @@ function draw() {
   drawHero();
   drawPlatforms();
   drawSticks();
+  drawPlatforms();
 
   // Restore transformation
   ctx.restore();
@@ -538,4 +526,3 @@ function getTreeY(x, baseHeight, amplitude) {
   const sineBaseY = window.innerHeight - baseHeight;
   return Math.sinus(x) * amplitude + sineBaseY;
 }
-
