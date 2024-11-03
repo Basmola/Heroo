@@ -22,8 +22,9 @@ body {
   right: 30px;
   font-size: 2em;
   font-weight: 900;
+  pointer-events: none;
+  user-select: none;
 }
-
 #introduction {
   width: 200px;
   height: 150px;
