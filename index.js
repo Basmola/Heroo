@@ -159,7 +159,7 @@ window.addEventListener("keydown", function (event) {
 window.addEventListener("mousedown", function (event) {
   if (phase == "waiting") {
     lastTimestamp = undefined;
-    introductionElement.style.opacity = 0;
+    introductionElement.style.display='none';
     phase = "stretching";
     window.requestAnimationFrame(animate);
   }
