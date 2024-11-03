@@ -344,6 +344,7 @@ Array.prototype.last = function () {
     // Draw scene
     drawPlatforms();
     drawHero();
+    drawPlatforms();
     drawSticks();
   
     // Restore transformation
