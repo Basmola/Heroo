@@ -73,9 +73,9 @@ function resetGame() {
   sceneOffset = 0;
   score = 0;
 
-  introductionElement.style.opacity = 1;
-  perfectElement.style.opacity = 0;
-  restartButton.style.display = "none";
+  introductionElement.style.display = 'block';
+  perfectElement.style.display ='none';
+  restartButton.style.display = 'none';
   scoreElement.innerText = score;
 
   // The first platform is always the same
