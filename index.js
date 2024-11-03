@@ -171,7 +171,7 @@ Array.prototype.last = function () {
   window.addEventListener("mousedown", function (event) {
     if (phase == "waiting") {
       lastTimestamp = undefined;
-      introductionElement.style.opacity = 0;
+      introductionElement.style.display='none';
       phase = "stretching";
       window.requestAnimationFrame(animate);
     }
