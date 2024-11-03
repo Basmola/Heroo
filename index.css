@@ -24,6 +24,8 @@ body {
   font-weight: 900;
   pointer-events: none;
   user-select: none;
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
 }
 #introduction {
   width: 200px;
