@@ -32,7 +32,7 @@ body {
   font-size: 0.8em;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  transition: opacity 2s;
+  transition: all 2s;
   border: none;
   background-color: transparent;
 }
@@ -58,4 +58,5 @@ body {
 #perfect {
   position: absolute;
   display:none;
+  transition: all 2s;
 }
