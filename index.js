@@ -186,7 +186,7 @@ window.addEventListener("mouseup", function (event) {
 window.addEventListener("touchstart", function (event) {
   if (phase == "waiting") {
     lastTimestamp = undefined;
-    introductionElement.style.opacity = 0;
+    introductionElement.style.display ='none';
     phase = "stretching";
     window.requestAnimationFrame(animate);
   }
@@ -234,8 +234,8 @@ function animate(timestamp) {
           scoreElement.innerText = score;
 
           if (perfectHit) {
-            perfectElement.style.opacity = 1;
-            setTimeout(() => (perfectElement.style.opacity = 0), 1000);
+            perfectElement.style.display='block';
+            setTimeout(() => (perfectElement.style.display = 'none'), 1000);
           }
 
           generatePlatform();
