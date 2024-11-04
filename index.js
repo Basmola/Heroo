@@ -85,7 +85,7 @@ function resetGame() {
   sceneOffset = 0;
   score = 0;
 
-  introductionElement.style.display ='flex';
+  introductionElement.style.display ='inline-flex';
   perfectElement.style.display = 'none';
   restartButton.style.display = "none";
   scoreElement.innerText = score;
@@ -238,7 +238,7 @@ function animate(timestamp) {
           scoreElement.innerText = score;
 
           if (perfectHit) {
-            perfectElement.style.display='flex';
+            perfectElement.style.display='inline-flex';
             setTimeout(() => (perfectElement.style.display = 'none'), 1000);
           }
 
@@ -295,7 +295,7 @@ function animate(timestamp) {
       const maxHeroY =
         platformHeight + 100 + (window.innerHeight - canvasHeight) / 2;
       if (heroY > maxHeroY) {
-        restartButton.style.display = "flex";
+        restartButton.style.display = "inline-flex";
         return;
       }
       break;
