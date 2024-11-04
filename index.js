@@ -238,7 +238,7 @@ function animate(timestamp) {
           scoreElement.innerText = score;
 
           if (perfectHit) {
-            perfectElement.style.display='block';
+            perfectElement.style.display = 'flex';
             setTimeout(() => (perfectElement.style.display = 'none'), 1000);
           }
 
@@ -295,7 +295,7 @@ function animate(timestamp) {
       const maxHeroY =
         platformHeight + 100 + (window.innerHeight - canvasHeight) / 2;
       if (heroY > maxHeroY) {
-        restartButton.style.display = 'block';
+        restartButton.style.display = 'flex';
         return;
       }
       break;
