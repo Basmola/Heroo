@@ -87,7 +87,7 @@ function resetGame() {
 
   introductionElement.style.display ='block';
   perfectElement.style.display = 'none';
-  restartButton.style.display = "none";
+  restartButton.style.display = 'none';
   scoreElement.innerText = score;
 
   // The first platform is always the same
@@ -295,7 +295,7 @@ function animate(timestamp) {
       const maxHeroY =
         platformHeight + 100 + (window.innerHeight - canvasHeight) / 2;
       if (heroY > maxHeroY) {
-        restartButton.style.display = "block";
+        restartButton.style.display = 'block';
         return;
       }
       break;
@@ -358,7 +358,7 @@ function draw() {
 restartButton.addEventListener("click", function (event) {
   event.preventDefault();
   resetGame();
-  restartButton.style.display = "none";
+  restartButton.style.display = 'none';
 });
 
 function drawPlatforms() {
