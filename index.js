@@ -184,7 +184,7 @@ window.addEventListener("mouseup", function (event) {
 });
 
 window.addEventListener("touchstart", function (event) {
-  event.preventDefault();
+
   event.stopPropagation();
   if (phase == "waiting") {
     lastTimestamp = undefined;
@@ -195,7 +195,7 @@ window.addEventListener("touchstart", function (event) {
 });
 
 window.addEventListener("touchend", function (event) {
-   event.preventDefault();
+ 
   event.stopPropagation();
   if (phase == "stretching") {
     phase = "turning";
